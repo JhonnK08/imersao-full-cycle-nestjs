@@ -3,7 +3,7 @@ import { Job } from 'bull';
 import { RoutesDriverService } from './routes-driver/routes-driver.service';
 
 @Processor('new-points')
-export class NewPointsConsumer {
+export class NewPointsJob {
   constructor(private routesDriverService: RoutesDriverService) {}
 
   @Process()
