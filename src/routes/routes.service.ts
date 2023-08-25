@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { DirectionsService } from 'src/maps/directions/directions.service';
 import { PrismaService } from 'src/prisma/prisma/prisma.service';
 import { CreateRouteDto } from './dto/create-route.dto';
-import { UpdateRouteDto } from './dto/update-route.dto';
 
 @Injectable()
 export class RoutesService {
@@ -59,13 +58,5 @@ export class RoutesService {
         id,
       },
     });
-  }
-
-  update(id: number, updateRouteDto: UpdateRouteDto) {
-    return `This action updates a #${id} route`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} route`;
   }
 }
